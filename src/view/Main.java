@@ -23,7 +23,7 @@ public class Main {
              switch (requsetForInsert){
                  case 1->{
                      laptop.setLaptopName(input.nextLine());
-
+                     laptopControler.sendDataToService(laptop);
                  }
              }
          }
