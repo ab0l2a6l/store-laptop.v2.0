@@ -10,4 +10,9 @@ public class LaptopControler {
         laptopService.sentDataTpDB(laptop);
 
     }
+    public  int sendIdToServiceForSearch(long id){
+        InterfaceService laptopservise = new LaptopService();
+        return laptopservise.findById(id);
+
+    }
 }
