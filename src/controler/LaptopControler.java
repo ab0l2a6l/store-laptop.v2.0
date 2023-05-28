@@ -1,11 +1,12 @@
 package controler;
 
 import model.entity.Laptop;
+import model.service.InterfaceService;
 import model.service.LaptopService;
 
 public class LaptopControler {
     public void sendDataToService(Laptop laptop) {
-        LaptopService laptopService = new LaptopService();
+        InterfaceService laptopService = new LaptopService();
         laptopService.sentDataTpDB(laptop);
 
     }
