@@ -27,11 +27,10 @@ public class LaptopDAO implements InterfaceDAO {
         }
         return null;
     }
-
+    @Override
     public int sendIdToDAOForDelete(long id) {
-        LaptopControler laptopControler = new LaptopControler();
-        Laptop laptop = laptopControler.sendIdToServiceForSearch(id);
-        if (laptop == null) {
+        Laptop laptop = findById(id);
+        if ( laptop != null) {
             laptops.remove(laptop);
             return 1;
         }
