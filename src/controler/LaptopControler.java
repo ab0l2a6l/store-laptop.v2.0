@@ -17,7 +17,7 @@ public class LaptopControler {
 
     }
 
-    public int sendIdToServiceForDelete(long id) {
+    public boolean sendIdToServiceForDelete(long id) {
         InterfaceService laptopDelete = new LaptopService();
         return laptopDelete.sendIdToServiceForDelete(id);
     }

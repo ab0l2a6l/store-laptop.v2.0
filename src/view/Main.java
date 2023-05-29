@@ -43,7 +43,7 @@ public class Main {
                 case 3 -> {
                     System.out.print("insert id for delete: ");
                     long idForDelete = input.nextLong();
-                    if (laptopControler.sendIdToServiceForDelete(idForDelete) == 1)
+                    if (laptopControler.sendIdToServiceForDelete(idForDelete) == true)
                         System.out.println("deleted");
                     else
                         System.out.println("id is wrong");

@@ -11,5 +11,5 @@ public interface InterfaceDAO {
 
     Laptop findById(long id);
 
-    int sendIdToDAOForDelete(long id);
+    boolean sendIdToDAOForDelete(long id);
 }

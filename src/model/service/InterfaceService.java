@@ -7,5 +7,5 @@ public interface InterfaceService {
 
     Laptop findById(long id);
 
-    int sendIdToServiceForDelete(long id);
+    boolean sendIdToServiceForDelete(long id);
 }

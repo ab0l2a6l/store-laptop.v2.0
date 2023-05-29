@@ -17,7 +17,7 @@ public class LaptopService implements InterfaceService {
         return interfaceDAO.findById(id);
     }
 
-    public int sendIdToServiceForDelete(long id) {
+    public boolean sendIdToServiceForDelete(long id) {
         InterfaceDAO interfaceDAO = new LaptopDAO();
         return interfaceDAO.sendIdToDAOForDelete(id);
     }
