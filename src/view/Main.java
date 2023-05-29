@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         LaptopControler laptopControler = new LaptopControler();
-        Laptop laptop = new Laptop();
 
         Scanner input = StaticScanner.getData();
 
@@ -24,6 +23,8 @@ public class Main {
             input.nextLine();
             switch (requsetForInsert) {
                 case 1 -> {
+                    Laptop laptop = new Laptop();
+
                     System.out.print("insert laptop name: ");
                     laptop.setLaptopName(input.nextLine());
 
