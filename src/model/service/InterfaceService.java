@@ -4,5 +4,8 @@ import model.entity.Laptop;
 
 public interface InterfaceService {
     void sentDataTpDB(Laptop laptop);
+
     Laptop findById(long id);
+
+    int sendIdToServiceForDelete(long id);
 }

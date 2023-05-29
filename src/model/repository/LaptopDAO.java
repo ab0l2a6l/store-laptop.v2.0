@@ -1,5 +1,6 @@
 package model.repository;
 
+import controler.LaptopControler;
 import model.entity.Laptop;
 
 import java.util.ArrayList;
@@ -13,18 +14,28 @@ public class LaptopDAO implements InterfaceDAO {
         laptops.add(laptop);
     }
 
-    public List<Laptop> getLaptops(){
+    public List<Laptop> getLaptops() {
         return laptops;
     }
 
     @Override
     public Laptop findById(long id) {
-        for (Laptop eachLaptop  : laptops){
+        for (Laptop eachLaptop : laptops) {
             if (eachLaptop.getId() == id) {
                 return eachLaptop;
             }
         }
         return null;
+    }
+
+    public int sendIdToDAOForDelete(long id) {
+        LaptopControler laptopControler = new LaptopControler();
+        Laptop laptop = laptopControler.sendIdToServiceForSearch(id);
+        if (laptop == null) {
+            laptops.remove(laptop);
+            return 1;
+        }
+        return 0;
     }
 
 }
