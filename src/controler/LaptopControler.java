@@ -5,20 +5,19 @@ import model.service.InterfaceService;
 import model.service.LaptopService;
 
 public class LaptopControler {
+    private InterfaceService laptopService = new LaptopService();
+
     public void sendDataToService(Laptop laptop) {
-        InterfaceService laptopService = new LaptopService();
         laptopService.sentDataTpDB(laptop);
 
     }
 
     public Laptop sendIdToServiceForSearch(long id) {
-        InterfaceService laptopservise = new LaptopService();
-        return laptopservise.findById(id);
+        return laptopService.findById(id);
 
     }
 
     public boolean sendIdToServiceForDelete(long id) {
-        InterfaceService laptopDelete = new LaptopService();
-        return laptopDelete.sendIdToServiceForDelete(id);
+        return laptopService.sendIdToServiceForDelete(id);
     }
 }
