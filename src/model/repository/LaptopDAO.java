@@ -17,4 +17,14 @@ public class LaptopDAO implements InterfaceDAO {
         return laptops;
     }
 
+    @Override
+    public Laptop findById(long id) {
+        for (Laptop eachLaptop  : laptops){
+            if (eachLaptop.getId() == id) {
+                return eachLaptop;
+            }
+        }
+        return null;
+    }
+
 }

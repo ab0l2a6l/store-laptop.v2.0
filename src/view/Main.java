@@ -33,7 +33,7 @@ public class Main {
                 }
                 case 2 -> {
                     System.out.print("insert id for search: ");
-                    if (laptopControler.sendIdToServiceForSearch(input.nextLong()) == 1)
+                    if (! laptopControler.sendIdToServiceForSearch(input.nextLong()).equals(null))
                         System.out.println("found");
                     else System.out.println("not found");
 

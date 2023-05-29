@@ -11,15 +11,8 @@ public class LaptopService implements InterfaceService {
         InterfaceDAO laptopDAO = new LaptopDAO();
         laptopDAO.save(laptop);
     }
-    public int findById(long id){
+    public Laptop findById(long id){
         InterfaceDAO interfaceDAO = new LaptopDAO();
-
-         for (Laptop laptops  : interfaceDAO.getLaptops()){
-            if (laptops.getId() == id)
-            {
-                return 1;
-            }
-         }
-        return 0;
+         return interfaceDAO.findById(id);
     }
 }
